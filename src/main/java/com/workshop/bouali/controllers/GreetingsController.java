@@ -1,4 +1,4 @@
-package com.workshop.bouali;
+package  com.workshop.bouali.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
