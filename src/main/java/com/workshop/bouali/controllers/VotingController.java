@@ -4,17 +4,20 @@ import com.workshop.bouali.pojo.Voting;
 import com.workshop.bouali.service.VotingService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @AllArgsConstructor
-@RestController("voting")
+@RestController
+@RequestMapping("voting")
 public class VotingController {
     VotingService votingService;
+    @GetMapping("")
+            public  String test(){
+        return "хуй";
+    }
+
     @GetMapping("all")
     public ResponseEntity<List<Voting>> getAllVoting(){
         return votingService.getAllVoting();
