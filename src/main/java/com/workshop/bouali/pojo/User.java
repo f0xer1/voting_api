@@ -14,4 +14,10 @@ public class User {
     private String lastName;
     private String password;
     private int age;
+    private boolean isPretendant;
+
+    @ManyToOne
+    @JoinColumn(name = "voting_id")
+    private Voting voting;
+
 }
