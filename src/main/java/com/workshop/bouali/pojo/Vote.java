@@ -11,13 +11,11 @@ public class Vote {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Long id;
+    private  String vote;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-
-
-    private  String vote;
 
     @ManyToOne
     @JoinColumn(name = "voting_id")

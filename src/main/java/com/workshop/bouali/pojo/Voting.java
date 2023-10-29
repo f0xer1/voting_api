@@ -17,16 +17,11 @@ public class Voting {
     private String name;
     private String description;
 
-    @Column(name = "pretendants_column")
-    @OneToMany(mappedBy = "voting", orphanRemoval = true)
-    private Set<User> pretendants = new LinkedHashSet<>();
-
-
-    @OneToOne(orphanRemoval = true)
-    @JoinColumn(name = "user_id")
-    private User owner;
-
-    @OneToMany(mappedBy = "voting", orphanRemoval = true)
-    private Set<Vote> votes = new LinkedHashSet<>();
+    @ManyToMany
+    @JoinTable(
+            name = "voting_pretendants",
+            joinColumns = @JoinColumn(name = "voting_id"),
+            inverseJoinColumns = @JoinColumn(name = "pretendants_id"))
+    private Set<Pretendant> pretendants = new LinkedHashSet<>();
 
 }
