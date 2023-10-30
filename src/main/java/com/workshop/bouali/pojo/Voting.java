@@ -1,5 +1,6 @@
 package com.workshop.bouali.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,6 +17,9 @@ public class Voting {
     private long id;
     private String name;
     private String description;
+    @JsonIgnore
+    @OneToMany(mappedBy = "voting", cascade =  CascadeType.ALL)
+    private Set<Vote> votes = new LinkedHashSet<>();
 
     @ManyToMany
     @JoinTable(
