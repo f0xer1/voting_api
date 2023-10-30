@@ -28,4 +28,6 @@ public class VotingService {
         votingRepository.save(voting);
         return new ResponseEntity<>("success",HttpStatus.CREATED) ;
     }
+
+
 }

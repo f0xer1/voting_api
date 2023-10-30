@@ -17,6 +17,11 @@ public class Voting {
     private long id;
     private String name;
     private String description;
+
+    @OneToOne(orphanRemoval = true)
+    @JoinColumn(name = "owner")
+    private User user;
+
     @JsonIgnore
     @OneToMany(mappedBy = "voting", cascade =  CascadeType.ALL)
     private Set<Vote> votes = new LinkedHashSet<>();

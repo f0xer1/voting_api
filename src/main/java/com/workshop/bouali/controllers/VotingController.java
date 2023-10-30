@@ -13,10 +13,6 @@ import java.util.List;
 @RequestMapping("voting")
 public class VotingController {
     VotingService votingService;
-    @GetMapping("")
-            public  String test(){
-        return "хуй";
-    }
 
     @GetMapping("all")
     public ResponseEntity<List<Voting>> getAllVoting(){
@@ -26,4 +22,5 @@ public class VotingController {
     public ResponseEntity<String> addVoting(@RequestBody Voting voting){
         return votingService.addVoting(voting);
     }
+
 }
