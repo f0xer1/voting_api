@@ -29,7 +29,9 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((request) -> request
-                        .anyRequest().permitAll()
+                        .requestMatchers("/sign-up").permitAll()
+                        .anyRequest().authenticated()
+
                 )
                 .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults());
