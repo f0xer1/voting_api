@@ -1,4 +1,4 @@
-package com.workshop.bouali.pojo;
+package com.votingapi.foxer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

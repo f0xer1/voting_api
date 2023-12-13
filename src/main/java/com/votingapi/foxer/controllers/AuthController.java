@@ -1,7 +1,7 @@
-package com.workshop.bouali.controllers;
+package com.votingapi.foxer.controllers;
 
-import com.workshop.bouali.pojo.User;
-import com.workshop.bouali.service.UserService;
+import com.votingapi.foxer.model.User;
+import com.votingapi.foxer.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

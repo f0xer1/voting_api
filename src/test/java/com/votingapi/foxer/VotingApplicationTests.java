@@ -1,10 +1,10 @@
-package com.workshop.bouali;
+package com.votingapi.foxer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BoualiApplicationTests {
+class VotingApplicationTests {
 
 	@Test
 	void contextLoads() {

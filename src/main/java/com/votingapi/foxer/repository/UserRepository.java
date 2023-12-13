@@ -1,6 +1,6 @@
-package com.workshop.bouali.repository;
+package com.votingapi.foxer.repository;
 
-import com.workshop.bouali.pojo.User;
+import com.votingapi.foxer.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.workshop.bouali.service;
+package com.votingapi.foxer.service;
 
-import com.workshop.bouali.pojo.Voting;
-import com.workshop.bouali.repository.VotingRepository;
+import com.votingapi.foxer.model.Voting;
+import com.votingapi.foxer.repository.VotingRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

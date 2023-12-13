@@ -1,4 +1,4 @@
-package com.workshop.bouali.pojo;
+package com.votingapi.foxer.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

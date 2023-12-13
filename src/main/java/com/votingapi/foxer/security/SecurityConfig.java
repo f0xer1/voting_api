@@ -1,7 +1,7 @@
-package com.workshop.bouali.security;
+package com.votingapi.foxer.security;
 
-import com.workshop.bouali.pojo.User;
-import com.workshop.bouali.repository.UserRepository;
+import com.votingapi.foxer.model.User;
+import com.votingapi.foxer.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
