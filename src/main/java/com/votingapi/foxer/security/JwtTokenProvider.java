@@ -23,7 +23,7 @@ public class JwtTokenProvider {
     @Value("${jwt.issuer}")
     private String jwtIssuer;
 
-    private String generateToken(Long id, String username, List<Role> roles){
+    public String generateToken(Long id, String username, List<Role> roles){
         return JWT.create()
                 .withIssuer(jwtIssuer)
                 .withSubject(username)

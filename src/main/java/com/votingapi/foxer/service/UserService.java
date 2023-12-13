@@ -1,28 +1,23 @@
 package com.votingapi.foxer.service;
 
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.votingapi.foxer.model.User;
-import com.votingapi.foxer.repository.UserRepository;
-import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
 
-@Service
-@AllArgsConstructor
-public class UserService {
+import javax.management.relation.RoleNotFoundException;
+import java.util.List;
+import java.util.Optional;
 
-    UserRepository userRepository;
-    private BCryptPasswordEncoder passwordEncoder;
+public interface UserService {
+    Optional<DecodedJWT> signIn(String username, String password);
 
-    public ResponseEntity<String> createUser(User user) {
-        try {
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            userRepository.save(user);
-        } catch (Exception e) {
-            return new ResponseEntity<>("failed",HttpStatus.CONFLICT);
-        }
-        return new ResponseEntity<>("success", HttpStatus.CREATED);
+    User signUp(User user) ;
 
-    }
+    User update(User user, String newPassword);
+
+    List<User> findAll();
+
+    Optional<User> findById(Long userId);
+
+    Optional<User> findByUsername(String username);
+    void deleteById(Long userId);
 }
